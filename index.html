@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & Web Services Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <h1>CodeX<span>AI</span></h1>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <div class="dropdown">
+        <button class="dropbtn">Fee Calculators <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <a href="javascript:void(0)" onclick="goToService('stripe')">Stripe</a>
+          <a href="javascript:void(0)" onclick="goToService('paypal')">PayPal</a>
+          <a href="javascript:void(0)" onclick="goToService('wise')">Wise</a>
+          <a href="javascript:void(0)" onclick="goToService('escrow')">Escrow</a>
+          <a href="javascript:void(0)" onclick="goToService('wire')">Wire Transfer</a>
+          <a href="javascript:void(0)" onclick="goToService('venmo')">Venmo</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Transform Your Business with <span>CodeXAI Solutions</span></h1>
+      <p>Innovative technology for the modern enterprise</p>
+      <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our <span>Services</span></h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-robot"></i>
+        <h3>AI Integration</h3>
+        <p>Seamlessly integrate AI into your business processes.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Custom web solutions tailored to your needs.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>E-commerce Virtual Assistance</h3>
+        <p>Expert support for Amazon, Shopify, and Etsy sellers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <h2>Our <span>Pricing</span></h2>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <h3>Basic</h3>
+        <div class="price">$99<span>/month</span></div>
+        <ul>
+          <li>Basic AI Integration</li>
+          <li>5GB Storage</li>
+          <li>Email Support</li>
+          <li>Basic Analytics</li>
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="popular">Most Popular</div>
+        <h3>Professional</h3>
+        <div class="price">$299<span>/month</span></div>
+        <ul>
+          <li>Advanced AI Integration</li>
+          <li>50GB Storage</li>
+          <li>Priority Support</li>
+          <li>Advanced Analytics</li>
+          <li>API Access</li>
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <ul>
+          <li>Custom AI Solutions</li>
+          <li>Unlimited Storage</li>
+          <li>24/7 Support</li>
+          <li>Custom Analytics</li>
+          <li>Dedicated Account Manager</li>
+        </ul>
+        <a href="#" class="btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background-color: #111111; color: hsl(196, 22%, 53%); padding: 60px 20px; font-family: 'Poppins', sans-serif;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 36px; margin-bottom: 10px; color: hsl(189, 22%, 50%);">Contact <span style="color: #00ffff;">Us</span></h2>
+      <p style="font-size: 16px; margin-bottom: 30px; color: hsl(186, 21%, 48%);">Let’s talk about your next project.</p>
+
+      <form id="contact-form" style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
+        <input type="text" name="user_name" placeholder="Your Name" required
+               style="padding: 15px; border: 2px solid #54848c; border-radius: 8px; background-color: #222; color: #527080;" />
+
+        <input type="email" name="user_email" placeholder="Your Email" required
+               style="padding: 15px; border: 2px solid #598390; border-radius: 8px; background-color: #222; color: #548e94;" />
+
+        <textarea name="message" placeholder="Your Message" rows="5" required
+                  style="padding: 15px; border: 2px solid #567f8f; border-radius: 8px; background-color: #222; color: hsl(193, 26%, 49%);"></textarea>
+
+        <button type="submit"
+                style="padding: 15px; background-color: hsl(183, 26%, 47%); border: none; color: #111; font-weight: bold; border-radius: 8px; cursor: pointer; font-size: 16px;">
+          Send Message
+        </button>
+
+        <p id="form-status" style="margin-top: 10px; color: #00ffcc; font-size: 14px;"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Leading the way in AI and web solutions for modern businesses.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@codexai.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 CodeXAI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      emailjs.sendForm('service_5ntni0e', 'template_y2wer37', this)
+        .then(function() {
+          document.getElementById('form-status').textContent = "Message sent successfully!";
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          document.getElementById('form-status').textContent = "Failed to send message. Please try again.";
+          console.error('EmailJS error:', error);
+        });
+    });
+  </script>
+
+  <script>
+    function goToService(service) {
+      if (!document.getElementById('fees-styles')) {
+        const style = document.createElement('style');
+        style.id = 'fees-styles';
+        style.textContent = `
+          .fee-calculator {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          }
+          .fee-calculator h2 {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          .fee-calculator input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+          }
+          .fee-calculator button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+          }
+          #fee-result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            display: none;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+
+      let calculator = document.getElementById('fee-calculator');
+      if (!calculator) {
+        calculator = document.createElement('div');
+        calculator.id = 'fee-calculator';
+        calculator.className = 'fee-calculator';
+        document.body.appendChild(calculator);
+      }
+
+      calculator.innerHTML = `
+        <h2>${service.charAt(0).toUpperCase() + service.slice(1)} Fee Calculator</h2>
+        <div>
+          <label for="fee-amount">Enter Amount ($):</label>
+          <input type="number" id="fee-amount" placeholder="Enter amount" min="0" step="0.01">
+          <button onclick="calculateFee('${service}')">Calculate Fees</button>
+          <div id="fee-result"></div>
+        </div>
+      `;
+      calculator.style.display = 'block';
+      calculator.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function calculateFee(service) {
+      const amount = parseFloat(document.getElementById('fee-amount').value);
+      if (isNaN(amount) || amount <= 0) {
+        alert('Please enter a valid amount');
+        return;
+      }
+
+      let feeRate, fixedFee;
+      switch (service) {
+        case 'stripe': feeRate = 2.9; fixedFee = 0.30; break;
+        case 'paypal': feeRate = 2.9; fixedFee = 0.30; break;
+        case 'venmo': feeRate = 1.75; fixedFee = 0.25; break;
+        case 'wise': feeRate = 0.5; fixedFee = 0.30; break;
+        case 'escrow': feeRate = 3.25; fixedFee = 0; break;
+        case 'wire': feeRate = 0; fixedFee = 25; break;
+        default: feeRate = 0; fixedFee = 0;
+      }
+
+      const fee = (amount * (feeRate / 100)) + fixedFee;
+      const received = amount - fee;
+      const result = document.getElementById('fee-result');
+
+      result.innerHTML = `
+        <p><strong>Amount Sent:</strong> $${amount.toFixed(2)}</p>
+        <p><strong>Fee (${feeRate}% + $${fixedFee}):</strong> $${fee.toFixed(2)}</p>
+        <p><strong>You'll Receive:</strong> $${received.toFixed(2)}</p>
+      `;
+      result.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
